@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<overlay  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  	
+	<script type="application/x-javascript">
+	  <![CDATA[
+		/*
+		  improvements more than welcome please submit these to github, regards
+		*/
+		var titoTabOpenFile = {
+		  
+		  openFile:function(aEvent)
+		  {
+			ko.commands.doCommand('cmd_open');
+		  }
+		};
+	  ]]>
+	</script>
+  	
+	<!-- tab context menu -->
+  
+	  <menupopup id="tabContextMenu">
+		  
+
+  		  <menuitem
+			insertbefore="menu_save2"
+			id="tito-buffertab-context-tab-open-file"
+			label="Open…"
+			oncommand="titoTabOpenFile.openFile(event)"
+		  />
+		  <menuseparator
+			insertbefore="menu_save2"
+			id="tito-buffertab-context-tab-open-file-separator"
+		  />
+		  
+	  </menupopup>
+</overlay>
